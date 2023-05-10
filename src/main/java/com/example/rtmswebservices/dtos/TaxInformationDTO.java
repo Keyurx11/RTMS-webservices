@@ -1,7 +1,5 @@
 package com.example.rtmswebservices.dtos;
 
-import com.example.rtmswebservices.entities.CarRegistration;
-
 import java.io.Serializable;
 import java.math.BigDecimal;
 
