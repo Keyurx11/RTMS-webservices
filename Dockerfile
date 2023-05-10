@@ -25,5 +25,3 @@ EXPOSE 8080
 
 # Start the application
 CMD ["java", "-jar", "rtms-webservices.jar"]
-
-#Database not setup

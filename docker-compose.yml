@@ -23,23 +23,3 @@ services:
       POSTGRES_DB: db-2
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: password
-
-  keycloak:
-    image: quay.io/keycloak/keycloak:latest
-    command: start-dev
-    ports:
-      - "8090:8080"
-    environment:
-      KEYCLOAK_ADMIN: dvla
-      KEYCLOAK_ADMIN_PASSWORD: dvla@gov.uk
-      DB_VENDOR: POSTGRES
-      DB_ADDR: db
-      DB_PORT: 5432
-      DB_DATABASE: keycloak
-      DB_USER: admin
-      DB_PASSWORD: password
-      KEYCLOAK_IMPORT: /tmp/realm-export.json
-    depends_on:
-      - db
-    volumes:
-      - ./realm-export.json:/tmp/realm-export.json

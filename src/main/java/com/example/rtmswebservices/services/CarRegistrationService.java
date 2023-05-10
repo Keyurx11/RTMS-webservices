@@ -68,7 +68,6 @@ public class CarRegistrationService {
         carRegistration.setRegistrationNumber(carRegistrationDTO.getRegistrationNumber());
         Optional<CarOwner> carOwner = carOwnerRepository.findById(carRegistrationDTO.getCarOwnerId());
         Optional<Address> address = addressRepository.findById(carOwner.get().getAddress().getId());
-        System.out.println("Find MEEEEEEE");
         System.out.println(address.get().getCity());
         carRegistration.setCarOwner(carOwner.get());
         carRegistration.setMake(carRegistrationDTO.getMake());
